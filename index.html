@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Colbert - Aula Virtual</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <a href="https://wa.me/+5493364349309" class="btn-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="logos/colbert.gif" alt="Logo Instituto" class="logo-img">
+            </div>
+            
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="carreras.html" onclick="salir()">Carreras</a></li>
+                    <li><a href="#" onclick="consultarPrecio()">Aula Virtual (Desc. San Nicolás)</a></li>
+                    <li><a href="descargas.html">Descargas</a></li>
+                    <li><a href="visitas-360.html">Visitas 360°</a></li>
+                    <li><a href="contacto.html" class="btn-contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Bienvenidos al Instituto Colbert</h1>
+            <p>Formando estudiantes competentes con visión de futuro en Latinoamérica.</p>
+        </div>
+    </section>
+
+    <main class="container main-content">
+        <article class="info-section">
+            <div class="text-content">
+                <h2>¿Quiénes somos?</h2>
+                <p>Somos un Centro Educativo fundado por Aaron Colbert, Ramón Campolloni, Ricardo Campolloni y Ricardo Mollo. Nuestra visión es brindar educación de calidad, centrada en la pedagogía clásica y hábitos de trabajo efectivos.</p>
+                
+                <h2>Más que una escuela</h2>
+                <p>No se trata solo de conocimientos obsoletos. Se trata de ayudarnos a pensar para crear conocimiento nuevo. Fomentar las ideas, la cultura, el pensamiento crítico y el cambio personal y profesional.</p>
+            </div>
+            <div class="image-content">
+                <img src="fotos/estudiantes001.jpg" alt="Estudiantes Instituto Colbert">
+            </div>
+        </article>
+
+        <section class="news-section">
+            <div class="card">
+                <h3>📢 Lanzamiento Campus Virtual</h3>
+                <p>Implementamos una nueva herramienta informática que facilitará la interacción entre estudiantes y profesores. Una verdadera prolongación de nuestras aulas en internet.</p>
+            </div>
+            <div class="card">
+                <h3>🏙️ San Nicolás de los Arroyos</h3>
+                <p>Nos gusta nuestra ciudad. Nos vio nacer y nos acogió. Desde San Nicolás podemos llegar tan lejos como queramos.</p>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2>Nuestro Equipo Docente</h2>
+            <p class="subtitle">Los mejores profesionales activos del mundo.</p>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="card-img">
+                        <img src="fotos perfil/uno.jpg" alt="Aaron Colbert">
+                    </div>
+                    <div class="card-info">
+                        <h3>Aaron Colbert</h3>
+                        <p>Ex Director General en Tiempo BBDO. Ayudó a Repsol a convertirse en multinacional.</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="card-img">
+                        <img src="fotos perfil/dos.jpg" alt="Ramon Campolloni">
+                    </div>
+                    <div class="card-info">
+                        <h3>Ramon Campolloni</h3>
+                        <p>Licenciado en Publicidad. Productor en Mediaset y gestor de product placement en cine.</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="card-img">
+                        <img src="fotos perfil/tres.jpg" alt="Ricardo Campolloni">
+                    </div>
+                    <div class="card-info">
+                        <h3>Ricardo Campolloni</h3>
+                        <p>Tecnólogo creativo y Futurista. Top 100 creative people según Forbes.</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="card-img">
+                        <img src="fotos perfil/cuatro.jpg" alt="Ricardo Mollo">
+                    </div>
+                    <div class="card-info">
+                        <h3>Ricardo Mollo</h3>
+                        <p>Periodista y escritor. Autor de "Arden las redes". Experto en medios.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="newsletter">
+                <h3>Suscríbete a nuestra newsletter</h3>
+                <p>Novedades, tendencias y mucho más.</p>
+                <form class="form-email" onsubmit="newsletter(event)">
+                    <input type="email" placeholder="Tu Email" required>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="copyright">
+                <p>WEB &copy; 2025 Instituto Colbert | Desarrollado por <strong>Walter Steketee</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Función Salir
+        function salir() {
+            // Opcional: alert("Navegando a otra sección...");
+        }
+
+        // Función Descuento San Nicolás
+        function consultarPrecio() {
+            let ciudad = prompt("Ingresa tu ciudad para calcular becas:");
+            if (ciudad && ciudad.toLowerCase().trim() === "san nicolas") {
+                alert("¡Tienes un 15% de descuento por ser de San Nicolás!\nPrecio: $25.500");
+            } else {
+                alert("Precio regular: $30.000");
+            }
+        }
+
+        // Función Newsletter
+        function newsletter(e) {
+            e.preventDefault();
+            alert("¡Gracias por suscribirte! Recibirás novedades pronto.");
+        }
+    </script>
+</body>
+</html>

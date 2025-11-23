@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Instituto Colbert</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="logos/colbert.gif" alt="Logo Instituto" class="logo-img">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="carreras.html">Carreras</a></li>
+                    <li><a href="visitas-360.html">Visitas 360°</a></li>
+                    <li><a href="descargas.html">Descargas</a></li>
+                    <li><a href="#" class="active btn-contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-page-wrapper">
+        <div class="container">
+            <div class="contact-container">
+                
+                <div class="contact-info">
+                    <h2>Hablemos</h2>
+                    <p>Estamos aquí para responder tus dudas sobre inscripciones, becas y soporte técnico.</p>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p>San Nicolás de los Arroyos, Buenos Aires.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@institutocolbert.edu.ar</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+54 9 336 434-9309</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form onsubmit="enviarMensaje(event)">
+                        <h3>Envíanos un mensaje</h3>
+                        
+                        <div class="input-group">
+                            <input type="text" id="nombre" required placeholder=" ">
+                            <label for="nombre">Nombre Completo</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Correo Electrónico</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="tel" id="telefono" placeholder=" ">
+                            <label for="telefono">Teléfono (Opcional)</label>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea id="mensaje" rows="4" required placeholder=" "></textarea>
+                            <label for="mensaje">¿En qué podemos ayudarte?</label>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Enviar Mensaje <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="copyright">
+                <p>WEB &copy; 2025 Instituto Colbert | Desarrollado por <strong>Walter Steketee</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function enviarMensaje(e) {
+            e.preventDefault(); // Evita que se recargue la página
+            const nombre = document.getElementById('nombre').value;
+            
+            // Simulación de éxito
+            alert(`¡Gracias ${nombre}! Hemos recibido tu mensaje. Te contactaremos a la brevedad.`);
+            
+            // Limpiar formulario
+            e.target.reset();
+        }
+    </script>
+
+</body>
+</html>
